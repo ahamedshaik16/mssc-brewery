@@ -1,2 +1,16 @@
-package com.guru.msscbrewery.services;public interface BeerService {
+package com.guru.msscbrewery.services;
+
+import com.guru.msscbrewery.web.model.BeerDto;
+
+import java.util.UUID;
+
+public interface BeerService {
+
+    BeerDto getBeerById(UUID beerId);
+
+    BeerDto saveNewBeer(BeerDto beerDto);
+
+    void updateBeer(UUID beerId, BeerDto beerDto);
+
+    void deleteById(UUID beerId);
 }
